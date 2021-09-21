@@ -1,0 +1,24 @@
+# permissions for end users to edit zoraprofiles.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: zoraprofile-editor-role
+rules:
+- apiGroups:
+  - zora.zoracloud.ai
+  resources:
+  - zoraprofiles
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - zora.zoracloud.ai
+  resources:
+  - zoraprofiles/status
+  verbs:
+  - get

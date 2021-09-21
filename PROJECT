@@ -1,0 +1,16 @@
+domain: zoracloud.ai
+layout:
+- go.kubebuilder.io/v3
+projectName: profiles
+repo: github.com/zoracloud/profiles
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: zoracloud.ai
+  group: zora
+  kind: ZoraProfile
+  path: github.com/zoracloud/profiles/api/v1
+  version: v1
+version: "3"
